@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
 fun CounterCard() {
     var counter by remember { mutableIntStateOf(0) }
     var maxInput by remember { mutableStateOf("") }
-    val maxValue = maxInput.toIntOrNull() ?: Int.MAX_VALUE
+    val maxValue = maxInput.toIntOrNull() ?: 10
 
     Card(
         modifier = Modifier
