@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 
 @Composable
 fun TaskListScreen(
@@ -21,7 +22,7 @@ fun TaskListScreen(
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = onAddTaskClick) {
-                Icon(Icons.Filled.Add, contentDescription = "Add Task")
+                Icon(Icons.Filled.Add, contentDescription = "Ajouter une tâche")
             }
         }
     ) { padding ->
@@ -38,6 +39,14 @@ fun TaskListScreen(
                             text = task.title,
                             style = MaterialTheme.typography.titleLarge
                         )
+                        if(task.priority == "Urgent") {
+                            Circle(Color.Red)
+                        }else if(task.priority == "Normal"){
+                            Circle(Color.Yellow)
+                        }
+                        else{
+                            Circle(Color.Black)
+                        }
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = task.description,
@@ -48,14 +57,7 @@ fun TaskListScreen(
                             text = "Priorité : ${task.priority}",
                             style = MaterialTheme.typography.bodySmall
                         )
-                        if(task.priority == "Urgent") {
-                            Circle(Color.Red)
-                        }else if(task.priority == "Normal"){
-                            Circle(Color.Yellow)
-                        }
-                        else{
-                            Circle(Color.Black)
-                        }
+
                     }
                 }
             }
@@ -65,7 +67,7 @@ fun TaskListScreen(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddTaskScreen(onTaskAdded: (String, String, String) -> Unit) {
+fun AddTaskScreen(navController : NavController, onTaskAdded: (String, String, String) -> Unit) {
     var taskText by remember { mutableStateOf("") }
     var taskDescriptionText by remember { mutableStateOf("") }
     var taskPriorityText by remember { mutableStateOf("") }
@@ -109,6 +111,7 @@ fun AddTaskScreen(onTaskAdded: (String, String, String) -> Unit) {
                 label = { Text("Priorité") },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                 modifier = Modifier
+                    .menuAnchor()
                     .fillMaxWidth()
             )
             ExposedDropdownMenu(
@@ -129,22 +132,36 @@ fun AddTaskScreen(onTaskAdded: (String, String, String) -> Unit) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(
-            onClick = {
-                if (taskText.isNotBlank() && taskPriorityText.isNotBlank()) {
-                    onTaskAdded(taskText, taskDescriptionText, taskPriorityText)
-                }
-            },
-            modifier = Modifier.align(Alignment.End)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text("Ajouter")
+            Button(
+                onClick = {
+                    navController.popBackStack()
+                },
+                modifier = Modifier.align(Alignment.CenterVertically)
+            ) {
+                Text("Annuler")
+            }
+
+            Button(
+                onClick = {
+                    if (taskText.isNotBlank() && taskPriorityText.isNotBlank()) {
+                        onTaskAdded(taskText, taskDescriptionText, taskPriorityText)
+                    }
+                },
+                modifier = Modifier.align(Alignment.CenterVertically)
+            ) {
+                Text("Ajouter")
+            }
         }
     }
 }
 
 @Composable
 fun Circle(color : Color){
-    Canvas(modifier = Modifier.size(100.dp), onDraw = {
+    Canvas(modifier = Modifier.size(10.dp), onDraw = {
         drawCircle(color = color)
     })
 }

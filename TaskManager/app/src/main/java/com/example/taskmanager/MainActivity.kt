@@ -42,6 +42,7 @@ fun TaskApp() {
         }
         composable("add_task") {
             AddTaskScreen(
+                navController = navController,
                 onTaskAdded = { title, description, priority ->
                     tasks.add(Task(title, description, priority))
                     navController.popBackStack()

@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a33c968-10bf-47a5-a365-d1c84863998a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/Task.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/8.11.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/Taks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/TaskViewActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/TaskViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManager/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/TaskViewActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager/app/src/main/java/com/example/taskmanager/TaskViewActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748941981369</updated>
-      <workItem from="1748941984730" duration="2443000" />
+      <workItem from="1748941984730" duration="3037000" />
     </task>
     <servers />
   </component>
